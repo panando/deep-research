@@ -4,9 +4,11 @@
 
 ---
 
+[中文说明](README_CN.md)
+
 ## Overview
 
-**Deep Research** is a Reasonix skill that transforms any complex research question into a structured, verifiable research report. It follows a rigorous 5-step methodology: **decompose → research → synthesize → verify → output**.
+**Deep Research** is a Claude Code / Reasonix skill that transforms any complex research question into a structured, verifiable research report. It follows a rigorous 5-step methodology: **decompose → research → synthesize → verify → output**.
 
 Unlike a simple "ask AI and get an answer" workflow, Deep Research:
 
