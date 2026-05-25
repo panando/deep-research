@@ -6,7 +6,7 @@
 
 ## 概述
 
-**Deep Research（深度研究）** 是一个 Reasonix 技能，能将任意复杂研究问题转化为结构化、可验证的研究报告。它遵循严格的 5 步方法论：**拆解 → 研究 → 综合 → 验证 → 输出**。
+**Deep Research（深度研究）** 是一个 Reasonix/Claude Code 技能，能将任意复杂研究问题转化为结构化、可验证的研究报告。它遵循严格的 5 步方法论：**拆解 → 研究 → 综合 → 验证 → 输出**。
 
 与简单"问 AI 拿答案"不同，Deep Research 会：
 
@@ -78,16 +78,14 @@ Step 5: 通过? → 生成报告文件
 ```
 deep-research/
 ├── SKILL.md                # 技能定义 — 中文（prompt + 规则）
-├── SKILL_EN.md             # 技能定义 — 英文
-├── report-template.md      # 报告输出模板 — 中文
-├── report-template_EN.md   # 报告输出模板 — 英文
+├── report-template.md      # 报告输出模板
 ├── README.md               # 英文 readme
 └── README_CN.md            # 本文件
 ```
 
 ## 安装
 
-1. 将 `deep-research/` 目录复制到 Reasonix 技能目录：
+1. 将 `deep-research/` 目录复制到 Reasonix / Claude Code 技能目录：
    - **项目级别：** `<project>/.reasonix/skills/deep-research/`
    - **全局：** `~/.reasonix/skills/deep-research/`
 
@@ -113,7 +111,7 @@ deep-research/
 
 | 要求 | 详情 |
 |------|------|
-| **平台** | Reasonix（或兼容的 agent 运行时） |
+| **平台** | Claude Code / Reasonix（或兼容的 agent 运行时） |
 | **工具** | `web_search`、`web_fetch`、`write_file`、`read_file` |
 | **模型** | 推荐：`deepseek-v4-pro`；最低：`deepseek-v4-flash` |
 
@@ -127,6 +125,3 @@ deep-research/
 | **迭代而不编造** | 最多 2 轮迭代；失败如实标注，绝不虚构 |
 | **输出结构化** | 统一报告格式，便于跨主题对比 |
 
-## License
-
-MIT
