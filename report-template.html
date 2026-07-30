@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deep Research Report: &lt;Research Topic&gt;</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #1f2328;
+      --muted: #59636e;
+      --border: #d1d9e0;
+      --accent: #0969da;
+      --accent-soft: #ddf4ff;
+      --warning-bg: #fff8c5;
+      --warning-fg: #7a4d00;
+      --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      --font-mono: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d1117;
+        --fg: #c9d1d9;
+        --muted: #8b949e;
+        --border: #30363d;
+        --accent: #58a6ff;
+        --accent-soft: #161b22;
+        --warning-bg: rgba(210, 153, 34, 0.15);
+        --warning-fg: #e3b341;
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 2rem 1rem;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2rem 2.5rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg);
+    }
+
+    header {
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: 1.85rem;
+      margin: 0 0 0.6rem;
+      line-height: 1.25;
+      color: var(--fg);
+    }
+
+    .meta {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .meta p {
+      margin: 0.25rem 0;
+    }
+
+    h2 {
+      font-size: 1.45rem;
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--fg);
+    }
+
+    h3 {
+      font-size: 1.15rem;
+      margin: 1.75rem 0 0.75rem;
+      color: var(--fg);
+    }
+
+    h4 {
+      font-size: 1rem;
+      margin: 1.25rem 0 0.5rem;
+      color: var(--muted);
+    }
+
+    p {
+      margin: 0.75rem 0;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    ul, ol {
+      margin: 0.75rem 0;
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin: 0.35rem 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+
+    th, td {
+      border: 1px solid var(--border);
+      padding: 0.6rem 0.8rem;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: var(--accent-soft);
+      font-weight: 600;
+      color: var(--fg);
+    }
+
+    tr:nth-child(even) {
+      background: rgba(127, 127, 127, 0.03);
+    }
+
+    code {
+      font-family: var(--font-mono);
+      font-size: 0.9em;
+      background: var(--accent-soft);
+      padding: 0.15rem 0.35rem;
+      border-radius: 4px;
+      color: var(--fg);
+    }
+
+    .warning {
+      background: var(--warning-bg);
+      color: var(--warning-fg);
+      border-left: 4px solid var(--warning-fg);
+      padding: 0.75rem 1rem;
+      margin: 1rem 0;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .sub-question {
+      margin: 1.5rem 0;
+      padding: 1rem 1.25rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      background: rgba(127, 127, 127, 0.02);
+    }
+
+    .sub-question h3 {
+      margin-top: 0;
+    }
+
+    .footer {
+      margin-top: 2.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media print {
+      body {
+        padding: 0;
+        background: #fff;
+      }
+      .container {
+        border: none;
+        max-width: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 1rem;
+      }
+      table {
+        font-size: 0.88rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Deep Research Report: &lt;Research Topic&gt;</h1>
+      <div class="meta">
+        <p><strong>Generated:</strong> &lt;YYYY-MM-DD HH:MM&gt;</p>
+        <p><strong>Original question:</strong> &lt;user's research question&gt;</p>
+        <p><strong>Iteration:</strong> Round &lt;N&gt;</p>
+      </div>
+    </header>
+
+    <main>
+      <section id="decomposition">
+        <h2>1. Sub-Question Decomposition</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Sub-Question</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>&lt;sub-question 1&gt;</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>&lt;sub-question 2&gt;</td>
+            </tr>
+            <tr>
+              <td>N</td>
+              <td>&lt;sub-question N&gt;</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="research">
+        <h2>2. Per-Question Research</h2>
+
+        <article class="sub-question">
+          <h3>Sub-Question N: &lt;sub-question title&gt;</h3>
+
+          <p><strong>Search terms:</strong> <code>&lt;search terms used&gt;</code></p>
+
+          <h4>Key sources</h4>
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Source</th>
+                <th>Key point</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td><a href="URL" target="_blank" rel="noopener">Source title</a></td>
+                <td>One-sentence core info</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td><a href="URL" target="_blank" rel="noopener">Source title</a></td>
+                <td>One-sentence core info</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h4>Answer</h4>
+          <p>&lt;Structured answer for this sub-question, including facts, data, and analysis&gt;</p>
+        </article>
+      </section>
+
+      <section id="synthesis">
+        <h2>3. Preliminary Synthesis</h2>
+
+        <h3>Core Findings</h3>
+        <ol>
+          <li><strong>&lt;Finding 1 title&gt;</strong> - &lt;one-sentence description&gt;</li>
+          <li><strong>&lt;Finding 2 title&gt;</strong> - &lt;one-sentence description&gt;</li>
+          <li><strong>&lt;Finding 3 title&gt;</strong> - &lt;one-sentence description&gt;</li>
+        </ol>
+
+        <h3>Preliminary Conclusion</h3>
+        <p>&lt;Comprehensive answer to the original question, 2~5 paragraphs. Logically connect findings from all sub-questions to form a complete argument.&gt;</p>
+
+        <h3>Uncertainties / Information Gaps</h3>
+        <ul>
+          <li>&lt;gap or uncertainty&gt;</li>
+          <li>&lt;gap or uncertainty&gt;</li>
+        </ul>
+      </section>
+
+      <section id="verification">
+        <h2>4. Verification</h2>
+
+        <h3>Verification Checkpoints</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Checkpoint (falsifiable statement)</th>
+              <th>Anchored claim</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>&lt;If X is true, then Y should be observed&gt;</td>
+              <td>&lt;corresponding core finding&gt;</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>&lt;checkpoint description&gt;</td>
+              <td>&lt;corresponding core finding&gt;</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Per-Checkpoint Verification</h3>
+
+        <article class="sub-question">
+          <h3>Checkpoint N: &lt;checkpoint description&gt;</h3>
+          <table>
+            <tbody>
+              <tr>
+                <th>Search terms</th>
+                <td><code>&lt;search terms&gt;</code></td>
+              </tr>
+              <tr>
+                <th>Key findings</th>
+                <td>&lt;search result summary&gt;</td>
+              </tr>
+              <tr>
+                <th>Comparison with conclusion</th>
+                <td>Consistent / Inconsistent / Partially consistent</td>
+              </tr>
+              <tr>
+                <th>Verdict</th>
+                <td>Pass / Fail</td>
+              </tr>
+              <tr>
+                <th>Reasoning</th>
+                <td>&lt;basis for verdict&gt;</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+
+        <h3>Verification Summary</h3>
+        <table>
+          <tbody>
+            <tr>
+              <th>Total checkpoints</th>
+              <td>&lt;M&gt;</td>
+            </tr>
+            <tr>
+              <th>Passed</th>
+              <td>&lt;N&gt;</td>
+            </tr>
+            <tr>
+              <th>Failed</th>
+              <td>&lt;K&gt;</td>
+            </tr>
+            <tr>
+              <th>Overall verdict</th>
+              <td>Passed / Failed</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="warning">
+          <strong>Warning if failed:</strong> &lt;failed checkpoints and reasons&gt;
+        </div>
+      </section>
+
+      <section id="conclusion">
+        <h2>5. Final Conclusion</h2>
+        <p>&lt;Final answer revised based on verification results. If all checkpoints passed, confirm the preliminary conclusion directly. If some failed, adjust the conclusion and annotate uncertainties.&gt;</p>
+      </section>
+
+      <section id="sources">
+        <h2>6. Source Index</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Title</th>
+              <th>URL</th>
+              <th>Related sub-question</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>&lt;source title&gt;</td>
+              <td><a href="URL" target="_blank" rel="noopener">URL</a></td>
+              <td>Sub-question N</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>&lt;source title&gt;</td>
+              <td><a href="URL" target="_blank" rel="noopener">URL</a></td>
+              <td>Sub-question N</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>This report was auto-generated by the deep-research skill. All information is based on web search results; please use with judgment.</p>
+    </footer>
+  </div>
+</body>
+</html>

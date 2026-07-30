@@ -4,11 +4,9 @@
 
 ---
 
-[中文说明](README_CN.md)
-
 ## Overview
 
-**Deep Research** is a Claude Code / Reasonix skill that transforms any complex research question into a structured, verifiable research report. It follows a rigorous 5-step methodology: **decompose → research → synthesize → verify → output**.
+**Deep Research** is a Reasonix skill that transforms any complex research question into a structured, verifiable research report. It follows a rigorous 5-step methodology: **decompose → research → synthesize → verify → output**.
 
 Unlike a simple "ask AI and get an answer" workflow, Deep Research:
 
@@ -79,15 +77,17 @@ Generated reports follow a standardized 6-section format with full source tracea
 
 ```
 deep-research/
-├── SKILL.md                # Skill definition
-├── report-template.md      # Report output template
+├── SKILL.md                # Skill definition — Chinese (prompt + rules)
+├── SKILL_EN.md             # Skill definition — English
+├── report-template.md      # Report output template — Chinese
+├── report-template_EN.md   # Report output template — English
 ├── README.md               # This file
 └── README_CN.md            # Chinese readme
 ```
 
 ## Installation
 
-1. Copy the `deep-research/` directory into your Reasonix (or Claude Code) skills folder:
+1. Copy the `deep-research/` directory into your Reasonix skills folder:
    - **Project-scoped:** `<project>/.reasonix/skills/deep-research/`
    - **Global:** `~/.reasonix/skills/deep-research/`
 
@@ -113,7 +113,7 @@ The skill spawns as a subagent, runs the full research pipeline independently, a
 
 | Requirement | Detail |
 |-------------|--------|
-| **Platform** | Claude Code, Reasonix (or compatible agent runtime) |
+| **Platform** | Reasonix (or compatible agent runtime) |
 | **Tools** | `web_search`, `web_fetch`, `write_file`, `read_file` |
 | **Model** | Recommended: `deepseek-v4-pro`; minimum: `deepseek-v4-flash` |
 
@@ -127,4 +127,6 @@ The skill spawns as a subagent, runs the full research pipeline independently, a
 | **Iterate, don't fabricate** | Up to 2 rounds; failures are annotated, never invented |
 | **Structured output** | Consistent report format enables cross-topic comparison |
 
+## License
 
+MIT
